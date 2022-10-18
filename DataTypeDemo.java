@@ -1,25 +1,52 @@
 /*
-Program: To understand various data types in java
+Program: To understand data types
 @author: sheetal soni
-@Date: 14 oct 2022  
+@Date: 18oct 2022  
 */
 
+//import packages 
+
+import java.util.Scanner;
 //declaring a class
 class DataTypeDemo
 {
-	//main method
 	public static void main(String args[])
 	{
-		//declaring local variables
-		int number1= 78;
+		//creating Scanner Object
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter a character:");
+		
+		//taking the character input 
+		char charValue = sc.next().charAt(0);
+		
+		//converting char to asciiValue
+		int asciiValue= charValue;
+	    // print ASCii Value
+		System.out.println("The Ascii value of "+ charValue + " is: "+asciiValue );
+		
+		int num1=9;
+		num1= num1+1; // new value 10
+		
+		//num1++  //post increment : value is used and then incremented
+		//++num1 // pre increment : value is incremented and then used
+		
+		int number1= 67;
+		int sum= number1++;
+		System.out.println("value of sum using number1++ :"+ sum);
+		
 		int number2= 67;
+		 sum= ++number2;
+		System.out.println("value of sum using ++number2 :"+ sum);
+		
+		
+    }
 
-		//calculating the sum
-		int sum = number1+ number2;
-		System.out.println("The sum is :"+sum); // printing the value of sum
-
-
-	}
-	// end of main
 }
-// end of class DataTypeDemo
+		
+		//decrement 
+		//num1=num1-1
+		//num1--
+		//--num1
+		//~ tlide: negative of each number
+		// The negative of 0 is -1
